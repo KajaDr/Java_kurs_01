@@ -31,7 +31,8 @@ public class SimpleApp {
         if (name.endsWith("a")) {
             System.out.println("You are a women");
         }
-         System.out.println("testowa zmiana")
+        System.out.println("testowa zmiana")
+        System.out.println("testowa zmiana_2")
 
         int scale = 0;
 
