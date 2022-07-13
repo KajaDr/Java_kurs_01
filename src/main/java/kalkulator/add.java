@@ -1,4 +1,4 @@
-package Kalkulator;
+/*package Kalkulator;
 
 public class add {
 
@@ -17,7 +17,7 @@ public class add {
         String AddStringKoty = "Ala i Ola maja razem " + sumaKotow + " kotow";
         return AddStringKoty;
 
-
+*/
       /*  Double wagaKarmy1 = 1.12;
         Double zapotrzebowanie = wagaKarmy1 ;
         System.out.println("Koty jedza " + zapotrzebowanie + " kg karmy tygodniowo ");

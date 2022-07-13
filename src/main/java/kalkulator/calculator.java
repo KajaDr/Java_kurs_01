@@ -1,4 +1,4 @@
-package kalkulator;
+/*package kalkulator;
 
 public class calculator {
     public static void result(){
@@ -8,3 +8,4 @@ public class calculator {
         System.out.println("Result of dividing by 0" +);
     }
 }
+*/
