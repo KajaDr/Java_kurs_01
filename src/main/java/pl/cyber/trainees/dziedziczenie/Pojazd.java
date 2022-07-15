@@ -24,8 +24,8 @@ public class Pojazd {
     // będzie wyswietlala zawartosc pól zwracala Stringa. THIS odwołanie sie w ramach klasy do danego parametru
     public String toString(){
         return "Marka : " + this.marka
-                + "rocznik : " + this.rocznik
-                + "napęd: " + this.naped;
+                + " rocznik : " + this.rocznik
+                + " napęd: " + this.naped;
 
     }
     // Gettery - metody których zadaniem jest pobieranie informacji z pól klas do dalszego przetwarzania

@@ -39,12 +39,12 @@ public class Model extends Pojazd {
     @Override // adnotacja wykorzystywna do przyslaniania metod
     public String toString() {
         return "Marka: " + getMarka()
-                +"rocznik: " + getRocznik()
-                + "naped: " + getNaped()
-                + "nazwa modelu: " + this.nazwa
-                + "przebieg: " + this.przebieg
-                + "pojSIlnik: " + this.pojemnoscSilnika
-                + "kolor: " + this.kolor;
+                +" rocznik: " + getRocznik()
+                + " naped: " + getNaped()
+                + " nazwa modelu: " + this.nazwa
+                + " przebieg: " + this.przebieg
+                + " pojSIlnik: " + this.pojemnoscSilnika
+                + " kolor: " + this.kolor;
 
     }
     //metody typu GETTERY
