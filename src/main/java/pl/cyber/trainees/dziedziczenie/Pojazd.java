@@ -39,4 +39,16 @@ public class Pojazd {
     public String getNaped() {
         return naped;
     }
+
+    public void setMarka(final String marka) {
+        this.marka = marka;
+    }
+
+    public void setRocznik(final String rocznik) {
+        this.rocznik = rocznik;
+    }
+
+    public void setNaped(final String naped) {
+        this.naped = naped;
+    }
 }
