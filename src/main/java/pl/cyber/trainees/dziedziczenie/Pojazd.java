@@ -40,6 +40,7 @@ public class Pojazd {
         return naped;
     }
 
+    // Setter metody których jest wstawianie informacji
     public void setMarka(final String marka) {
         this.marka = marka;
     }
