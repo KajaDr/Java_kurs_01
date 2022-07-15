@@ -1,84 +1,23 @@
 package pl.cyber.trainees;
 
-import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.math.RoundingMode;
-import java.util.Scanner;
+
+import pl.cyber.trainees.dziedziczenie.Kolor;
+import pl.cyber.trainees.dziedziczenie.Model;
 
 public class SimpleApp {
-    //komentarz
-    //dd
-    //CTRL + lewy przycisk myszy
-    String tekst = "";
 
+// Ctrl +P podpowiadani w użyciu metod/deklaracji obiektów dostępnch parametrów
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("What's your name?");
-        String name = scanner.nextLine();
+         Model modelPojazdu1 = new Model();
+        var modelPojazdu2 = new Model("VW", "2020", "przód","Pasat",10000, 2.0, Kolor.ZIELONY);
+        var modelPojazdu3 = new Model("BMW", "2021", "tył","faae",20000, 2.0, Kolor.CZERWONY);
 
-        System.out.println("My first Application " + name);
+        System.out.println(modelPojazdu2.toString());
 
-        System.out.println("How old are you?");
-        int wiek = Integer.parseInt(scanner.nextLine());
-        int num1 = 15, sum, divide, multiplication;
-        divide= Integer.parseInt(String.valueOf(wiek/num1));
-        multiplication= Integer.parseInt(String.valueOf(wiek*num1));
-
-        sum = Integer.parseInt(String.valueOf(wiek + num1));
-        System.out.println("OH, your age will be " + sum + ", after 15 years");
-        System.out.println("Division of your age will be " + divide + " divide by 15");
-        System.out.println("OH, your age will be " + multiplication + " when I multiplicate it by 15");
-        if (name.endsWith("a")) {
-            System.out.println("You are a women");
-        }
-         System.out.println("testowa zmiana")
-
-        int scale = 0;
-
-        //PRACA DOMOWA
-
-        String space = " ";
-        String a = name;
-        String b = "ma kota";
-        System.out.println(a + space + b);
-
-        roundNumber("2.34", scale);
-        System.out.println("NEXT");
-        roundNumber("2.44", scale);
-        System.out.println("NEXT");
-        roundNumber("2.46", scale);
-        System.out.println("NEXT");
-        roundNumber("2.5", scale);
-        System.out.println("NEXT");
-        roundNumber("2.55", scale);
-        System.out.println("NEXT");
-        roundNumber("2.6", scale);
-        System.out.println("NEXT");
-
-        //Zaokrąglanie liczb
-        //region Zaokrąglanie liczb
-        //       double-> Double -> 2.555 taka reprezentacja liczby w systemie
-        //     BigDecimal wartosc = new BigDecimal(BigInteger.ONE, 2) // CTRL+ P podpowiedź (deklaracja) jaka wartosc moge wprowadzic
-
-
-    }
-
-    public static void roundNumber(final String number, int scale) {  //To najczęstszy sposób gdzie ja stosuję zaokrąglanie liczb
-
-        BigDecimal value = BigDecimal.valueOf(Double.parseDouble(number));
-        var roundHalfUp = value;
-        roundHalfUp = roundHalfUp.setScale(scale, RoundingMode.UP);
-
-        var roundHalfDown = value;
-        roundHalfDown = roundHalfDown.setScale(scale, RoundingMode.DOWN);
-
-        var roundHalfFloor = value;
-        roundHalfUp = roundHalfUp.setScale(scale, RoundingMode.FLOOR);
-
-        System.out.println("Round Half up: " + roundHalfUp);
-        System.out.println("Round Half down: " + roundHalfDown);
-        System.out.println("Round Half floor: " + roundHalfFloor);
-
+        System.out.println(modelPojazdu2.getMarka());
+        System.out.println(modelPojazdu2.getNaped());
+        System.out.println(modelPojazdu2.getNazwa());
+//można kolor wpisać z metody Valueoff
 
     }
 
