@@ -3,14 +3,36 @@ package pl.cyber.trainees;
 
 import pl.cyber.trainees.dziedziczenie.Kolor;
 import pl.cyber.trainees.dziedziczenie.Model;
+import pl.cyber.trainees.service.OdczytDanych;
+import pl.cyber.trainees.spotkania.Petla;
+import pl.cyber.trainees.spotkania.kalkulator_foreach.Dodawanie;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 // deklaracje na górze nie powinny być ciężkie, aby nie obciązac komputera,
 public class SimpleApp {
+    //-------------------------------------------------------------------------
 
 // Ctrl +P podpowiadani w użyciu metod/deklaracji obiektów dostępnch parametrów
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
+        OdczytDanych odczytDanych = new OdczytDanych();
+        //odczytujemy dane z klawiatury
+     System.out.println("Jak masz na imie: ");
+
+     String firstName = odczytDanych.wprowadzonaWartoscKlawiatury();
+     System.out.println("Witaj " + firstName + " :)");
+
+//-----------------------------------------------------------------------------
+        String firstNameFromFile = odczytDanych.daneZPliku(new File("src/main........"));
+        Model modelPojazduZpliku = odczytDanych.daneOmodeluPojazdu(new File("src/main/resources/mo"));
+        System.out.println(firstNameFromFile);
+        System.out.println((modelPojazduZpliku));
+
+
          Model modelPojazdu1 = new Model();
         var modelPojazdu2 = new Model("VW", "2020", "przód","Pasat",10000, 2.0, Kolor.ZIELONY);
         var modelPojazdu3 = new Model("BMW", "2021", "tył","faae",20000, 2.0, Kolor.CZERWONY);
@@ -110,7 +132,7 @@ INSTRUKCJE WARUNKOWE
     foreach(Strings element : strings){ <- zastosowanie do np. List
     // String element - pojedyńczy element z string
     // : oddzielenie
- */
+ /*
         for (int i = 0; i<2; i++) {
             var tmp:String = strings.get(i);
            if(tmp == "pierwszy"){// sprawdza czy nasza zmienna tmp jest równa wyrażeniu pierwszy
@@ -119,11 +141,64 @@ INSTRUKCJE WARUNKOWE
             System.out.println("inny element: " + strings.get(i));
         }
 
+*/
+    /*    // petla drukowanie
+        Petla petla = new Petla();
+        petla.wyswietl0do100();
+//zadanie petla z dodawaniem
+        List<Double> listaDouble = new ArrayList<>(Arrays.asList(
+                1.0,
+                2.0,
+                5.0,
+                10.0,
+                20.0
+
+        ));
+        listaDouble.add(30.0);
+
+        petla.dodawanieElementowDouble(listaDouble);
+
+        Dodawanie dodawanieDouble= new Dodawanie();
 
 
+        System.out.println(dodawanieDouble.dodawanie(1.0, 2.0));
+// drukowanie setu tzn wyswietlanie HASHSETU
+        petla.wyswietlSet();
+*/
+
+/*
+LIST:
+ArrayList() tablica listy ktora nie przechowuje informacji o poprzednim i nastepnym rekordzie
+LinkedList
+SET:
+HashSet() - nie gwarantuje kolejnosci
+TreeSet() gwarantuje kolejnosc
+Set<String> nazwaSet = new HashSet<>();
+nazwaSet.add("pierwszy")
+Set<Integer>intSet = new HashSet<>(Set.of(1,2,3,...maksymalnie 10 elementów));
+Zadanie:
+Utworzenie metody która wyswietli zadany set
+Set<Integer>intSet = new HashSet<>(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11);
+następnie przez pętle foreach wyświetlić elementy
+
+ */
 
 
     }
 
+
+// przypominajka  konstrukcji
+    // Integer nazwa zmiennej = 0 -  Typ nazwaZmiennej = (przypisanie zmiennej wartosci)0 (wartosc)
+    //List<Double> lista = new ArrayList<>() ->
+    //List <- interface mechanizmu. Interface - zbiór dostępnych metod do wykonania
+    //<TYP> <- deklaracja przechowywanego typu. Jest możliwe String, BigDecimal, Double, Model, Pojazd etc. nie podajemy metod ani klas
+    //lista <- nazwaZmiennej
+    // =  deklaracja wartości
+    //new - w slowniku pojęc
+    // ArrayList<>() wybór konkretnej wartości implementacji interacu List
+    //Integer - obiektowa reprezentajca liczby która wiąrze ze sobą rożne metody
+    //int - ma mniejsze mozliwosci obliczeniowe
+    // for(String
+    //String element pojedynczy element  z stringiem
 
 }
