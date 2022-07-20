@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class PracaDomowa {
     public static void main(String[] args) throws IOException {
-        System.out.println("Hey you give me:");
+        System.out.println("Hey you! give me:");
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader((System.in))
         );
