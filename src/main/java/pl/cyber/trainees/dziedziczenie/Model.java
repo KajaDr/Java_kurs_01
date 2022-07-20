@@ -10,10 +10,10 @@ public class Model extends Pojazd {
 
     public Model() {
         super();
-        this.nazwa= "";
-        this.przebieg= 0;
+        this.nazwa = "";
+        this.przebieg = 0;
         this.pojemnoscSilnika = 0.0;
-        this.kolor= null;
+        this.kolor = null;
     }
 
     public Model(
@@ -39,7 +39,7 @@ public class Model extends Pojazd {
     @Override // adnotacja wykorzystywna do przyslaniania metod
     public String toString() {
         return "Marka: " + getMarka()
-                +" rocznik: " + getRocznik()
+                + " rocznik: " + getRocznik()
                 + " naped: " + getNaped()
                 + " nazwa modelu: " + this.nazwa
                 + " przebieg: " + this.przebieg
@@ -47,30 +47,36 @@ public class Model extends Pojazd {
                 + " kolor: " + this.kolor;
 
     }
+
     //metody typu GETTERY
     public String getNazwa() {
         return nazwa;
     }
+
     public Integer getPrzebieg() {
         return przebieg;
     }
+
     public Double getPojemnoscSilnika() {
         return pojemnoscSilnika;
     }
+
     public Kolor getKolor() {
         return kolor;
     }
+
     //Settery - pozwalają nadac nowe  wartosci
-    public void setNazwa(final String nazwa){
-        this.nazwa =nazwa;
+    public void setNazwa(final String nazwa) {
+        this.nazwa = nazwa;
 
         //Ctrl + spacja wyswietla okno dialogowe jakie sa dostepne mozliwosci
 
 
     }
-     public void setPrzebieg(final Integer przebieg){
+
+    public void setPrzebieg(final Integer przebieg) {
         this.przebieg = przebieg;
-     }
+    }
 
     public void setPojemnoscSilnika(final Double pojemnoscSilnika) {
         this.pojemnoscSilnika = pojemnoscSilnika;

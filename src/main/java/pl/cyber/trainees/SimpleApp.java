@@ -1,17 +1,12 @@
 package pl.cyber.trainees;
 
-
 import pl.cyber.trainees.dziedziczenie.Kolor;
 import pl.cyber.trainees.dziedziczenie.Model;
 import pl.cyber.trainees.service.OdczytDanych;
-import pl.cyber.trainees.spotkania.Petla;
-import pl.cyber.trainees.spotkania.kalkulator_foreach.Dodawanie;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 // deklaracje na górze nie powinny być ciężkie, aby nie obciązac komputera,
 public class SimpleApp {
@@ -20,20 +15,20 @@ public class SimpleApp {
 // Ctrl +P podpowiadani w użyciu metod/deklaracji obiektów dostępnch parametrów
     public static void main(String[] args) throws FileNotFoundException {
         OdczytDanych odczytDanych = new OdczytDanych();
-        //odczytujemy dane z klawiatury
+        //odczytujemy dane z klawiatury.
      System.out.println("Jak masz na imie: ");
 
      String firstName = odczytDanych.wprowadzonaWartoscKlawiatury();
      System.out.println("Witaj " + firstName + " :)");
 
 //-----------------------------------------------------------------------------
-        String firstNameFromFile = odczytDanych.daneZPliku(new File("src/main........"));
-        Model modelPojazduZpliku = odczytDanych.daneOmodeluPojazdu(new File("src/main/resources/mo"));
+        String firstNameFromFile = odczytDanych.daneZPliku(new File("src/main/resources/dane-zew.txt"));
+        Model modelPojazduZpliku = odczytDanych.daneOmodeluPojazdu(new File("src/main/resources/modelPojazdu.txt"));
         System.out.println(firstNameFromFile);
         System.out.println((modelPojazduZpliku));
 
 
-         Model modelPojazdu1 = new Model();
+        Model modelPojazdu1 = new Model();
         var modelPojazdu2 = new Model("VW", "2020", "przód","Pasat",10000, 2.0, Kolor.ZIELONY);
         var modelPojazdu3 = new Model("BMW", "2021", "tył","faae",20000, 2.0, Kolor.CZERWONY);
 
