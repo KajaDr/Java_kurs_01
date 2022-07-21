@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 import java.util.Scanner;
 
 
-public class PracaDomowa {
+public class DodawanieLiczb {
     public static void main(String[] args) throws IOException {
         System.out.println("Hey you! give me:");
         BufferedReader reader = new BufferedReader(
