@@ -3,7 +3,7 @@ package pl.cyber.trainees.PracaDomowa_03;
 import java.io.File;
 import java.io.FileNotFoundException;
 
-public class CarApp {
+public class PracaDomowa {
     public static void main(String[] args) throws FileNotFoundException {
 
         Cars readData = new Cars();
@@ -15,6 +15,15 @@ public class CarApp {
 
         String carModelFromFile3 = readData.DateFromFile(new File("src/main/resources/samochody/pojazd_3"));
         System.out.println(carModelFromFile3);
+
+        CarApp2 readData3 = new CarApp2();
+        var LoopCar = readData;
+        System.out.println(LoopCar);
+
+
+
+
+
 
     }
 }

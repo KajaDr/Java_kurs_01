@@ -31,6 +31,9 @@ public class CarApp2 {
 
                     }
                 }
+      //      while (scan.hasNext()) {
+        //        modelePojazdu.add(getModelPojazduZPliku(scan.nextLine()))
+            }
             }
 
     private static class LoopCar {
