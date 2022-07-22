@@ -3,8 +3,10 @@ package pl.cyber.trainees.PracaDomowa_03;
 import java.io.File;
 import java.io.FileNotFoundException;
 
-public class PracaDomowa {
-    public static void main(String[] args) throws FileNotFoundException {
+public class RozwiazanieZadaniaNr3 {
+    // treść zadania
+
+    public void rozwiazanie() throws FileNotFoundException {
 
         Cars readData = new Cars();
         String carModelFromFile = readData.DateFromFile(new File("src/main/resources/samochody/pojazd_1"));
@@ -16,14 +18,9 @@ public class PracaDomowa {
         String carModelFromFile3 = readData.DateFromFile(new File("src/main/resources/samochody/pojazd_3"));
         System.out.println(carModelFromFile3);
 
-        CarApp2 readData3 = new CarApp2();
+        KlasaUruchomieniowa readData3 = new KlasaUruchomieniowa();
         var LoopCar = readData;
         System.out.println(LoopCar);
-
-
-
-
-
-
     }
+
 }
