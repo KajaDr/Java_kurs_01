@@ -102,7 +102,7 @@ public class DodawanieLiczb {
         System.out.println("If you multiplay by 10 you get = " + bg5m +
                 "\nIf you divide by 2 you get = " + bg5a+
                 "\nIf you add previous value you will get " + sum3);
-
+a
 
     }
 }
