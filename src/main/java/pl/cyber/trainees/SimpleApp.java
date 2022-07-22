@@ -8,7 +8,7 @@ public class SimpleApp {
 
 // Ctrl +P podpowiadani w użyciu metod/deklaracji obiektów dostępnch parametrów
     public static void main(String[] args) {
-
+//
     }
 
 
