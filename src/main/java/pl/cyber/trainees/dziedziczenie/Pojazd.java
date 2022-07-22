@@ -1,4 +1,5 @@
 package pl.cyber.trainees.dziedziczenie;
+
 // Nowa klasa okreslajaca markę pojazdu
 public class Pojazd {
 
@@ -22,21 +23,36 @@ public class Pojazd {
     }
 
     // będzie wyswietlala zawartosc pól zwracala Stringa. THIS odwołanie sie w ramach klasy do danego parametru
-    public String toString(){
+    public String toString() {
         return "Marka : " + this.marka
-                + "rocznik : " + this.rocznik
-                + "napęd: " + this.naped;
+                + " rocznik : " + this.rocznik
+                + " napęd: " + this.naped;
 
     }
     // Gettery - metody których zadaniem jest pobieranie informacji z pól klas do dalszego przetwarzania
 
-    public String getMarka(){
+    public String getMarka() {
         return marka;
     }
+
     public String getRocznik() {
         return rocznik;
     }
+
     public String getNaped() {
         return naped;
+    }
+
+    // Setter metody których jest wstawianie informacji
+    public void setMarka(final String marka) {
+        this.marka = marka;
+    }
+
+    public void setRocznik(final String rocznik) {
+        this.rocznik = rocznik;
+    }
+
+    public void setNaped(final String naped) {
+        this.naped = naped;
     }
 }
