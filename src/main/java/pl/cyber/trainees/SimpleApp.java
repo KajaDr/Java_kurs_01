@@ -114,7 +114,7 @@ public class SimpleApp {
         System.out.println("_________________Ćwiczenie nr 4 ______________\n" +
                 "Instrukcje warunkowe");
 
-        InstrukcjeWarunkowe instrukcjeWarunkowe = new InstrukcjeWarunkowe(10);
+        InstrukcjeWarunkowe instrukcjeWarunkowe = new InstrukcjeWarunkowe();
        // Integer number1= 10;
         // instrukcjeWarunkowe.sprawdzanieRownosci(number1);
 

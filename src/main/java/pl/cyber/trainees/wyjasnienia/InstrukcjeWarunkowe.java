@@ -5,17 +5,14 @@ public class InstrukcjeWarunkowe {
 
     public Integer number1;
 
-    public InstrukcjeWarunkowe(Integer number) {
-        this.number1 = number;
-
-    }
-    public boolean sprawdzanieRownosci(Integer number1) {
-        if (this.number1 != 10) {
-            return true;
-        } else {
-            System.out.println("liczba równa 10");
+    public boolean InstrukcjeWarunkowe(Integer number) {
+            if (this.number1 != 10) {
+                return true;
+            } else {
+                System.out.println("liczba równa 10");
+            }
+            return false;
         }
-        return false;
     }
 // 2 możliwosc
     // public boolean sprawdzenieRownosci(Integer liczba){
