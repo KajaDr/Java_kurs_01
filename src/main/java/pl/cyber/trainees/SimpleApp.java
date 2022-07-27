@@ -13,9 +13,13 @@ package pl.cyber.trainees; // okreslenie pakietu gdzie znajduje sie klasa
 
 //endregion
 
+import pl.cyber.trainees.pracaDomowa29Tydzien.ImieIWiek;
+import pl.cyber.trainees.pracaDomowa29Tydzien.ParzystaNIeParzysta;
 import pl.cyber.trainees.wyjasnienia.Basics;
 import pl.cyber.trainees.wyjasnienia.BasicsInteger;
 import pl.cyber.trainees.wyjasnienia.InstrukcjeWarunkowe;
+
+import java.util.Scanner;
 
 
 //Linia public class SimpleApp. Opisuje definicję klasy o nazwie SimpleApp.
@@ -114,9 +118,48 @@ public class SimpleApp {
         System.out.println("_________________Ćwiczenie nr 4 ______________\n" +
                 "Instrukcje warunkowe");
 
-        InstrukcjeWarunkowe instrukcjeWarunkowe = new InstrukcjeWarunkowe();
-       // Integer number1= 10;
+        InstrukcjeWarunkowe instrukcjeWarunkowe = new InstrukcjeWarunkowe(5);
         // instrukcjeWarunkowe.sprawdzanieRownosci(number1);
+
+        System.out.println("\n_________________Praca domowa ______________\n" +
+                "Imię i nazwisko");
+        ImieIWiek imieIWiek=new ImieIWiek();
+        imieIWiek.wczytajImie("Karolina");
+
+        ImieIWiek imieIWiek1 = new ImieIWiek();
+        Integer wiek = 28;
+        System.out.println("Twoj wiek"+SEPARACJA_SPACJA+wiek);
+
+        System.out.println("\n_________________Praca domowa ______________\n" +
+                "Warunki");
+        ParzystaNIeParzysta parzystaNIeParzysta = new ParzystaNIeParzysta();
+        parzystaNIeParzysta.tekstPnP(1);
+        Integer number2=parzystaNIeParzysta.parzystaNIeParzysta(6);
+
+        parzystaNIeParzysta.tekstPnP(2);
+        System.out.println("Podaj swoją liczbę, zobaczymy czy jest podzielna przez 5 i 3");
+
+        Scanner scanner = new Scanner(System.in);
+        Integer number3= scanner.nextInt();
+        System.out.println("Liczba ta :"+parzystaNIeParzysta.parzystaNieParzysta2(number3)+" podzielna");
+
+        parzystaNIeParzysta.tekstPnP(3);
+        Scanner scanner1= new Scanner(System.in);
+        System.out.println("hej podaj liczbę do spotegowania:");
+        Integer number4 = scanner1.nextInt();
+        parzystaNIeParzysta.potega(number4);
+
+        parzystaNIeParzysta.tekstPnP(4);
+        Scanner scanner2= new Scanner(System.in);
+        System.out.println("hej podaj liczbę do pierwiastkowania");
+        Integer number5=scanner2.nextInt();
+        parzystaNIeParzysta.pierwiastek(number5);
+
+
+
+
+
+
 
 
     }

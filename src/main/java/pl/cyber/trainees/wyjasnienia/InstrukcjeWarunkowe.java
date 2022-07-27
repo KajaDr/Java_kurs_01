@@ -1,19 +1,26 @@
 package pl.cyber.trainees.wyjasnienia;
 
+import static java.lang.System.*;
+
 public class InstrukcjeWarunkowe {
     //Metoda która zwróci true/false jeśli podana liczba w parametrze nie jest równa 10
 
-    public Integer number1;
 
-    public boolean InstrukcjeWarunkowe(Integer number) {
-            if (this.number1 != 10) {
-                return true;
-            } else {
-                System.out.println("liczba równa 10");
-            }
-            return false;
-        }
+    public InstrukcjeWarunkowe() {
     }
+
+    public  InstrukcjeWarunkowe(Integer number1) {
+            if (number1 != 10) {
+                out.println("liczba inna 10");
+
+            } else {
+                out.println("liczba równa 10");
+            }
+
+
+    }
+
+}
 // 2 możliwosc
     // public boolean sprawdzenieRownosci(Integer liczba){
     //   if(....)
@@ -49,4 +56,3 @@ public class InstrukcjeWarunkowe {
 
 
      */
-}
