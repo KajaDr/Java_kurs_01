@@ -130,9 +130,9 @@ public class SimpleApp {
 
         InstrukcjeWarunkowe instrukcjeWarunkowe= new InstrukcjeWarunkowe(0);
 
-        instrukcjeWarunkowe.uruchom();
+      instrukcjeWarunkowe.uruchom();
 
-        instrukcjeWarunkowe.jakaPlec2("mezczyzna");
+        // instrukcjeWarunkowe.jakaPlec2("mezczyzna");
 
 
 

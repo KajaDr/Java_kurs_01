@@ -11,7 +11,8 @@ public class InstrukcjeWarunkowe {
     public void uruchom(){
       //  wyswietlSwitch(7);
        // zadanie5();
-        jakaPlec(Plec.KOBIETA);
+      //  jakaPlec(Plec.KOBIETA);
+        pierwszeWhile();
 
     }
     public InstrukcjeWarunkowe(Integer number) {
@@ -216,7 +217,52 @@ dla pozostałych → Wskazana liczba jest inna niż oczekiwana
             System.out.println("plec nie znana");
         }
     }
+    /*
 
+    WHILE oraz do WHILE
+   while - słowo kluczowe określające deklarację pętli while
+do - słowo kluczowe określające deklarację pętli do-while
+(condition) - warunek, który określa nam zakończenie działania pętli, aby pętla while zadziałała
+to piersze stwierdzenie musi się nie spełniać
+{} - rozpoczęcie i zakończenie bloku / struktury pętli w ramach tych nawiasów znajduje się kod funkcji, którą ma wykonać program
+
+STRUKTURA DO ZAPAMIĘTANIA:
+  while(condition) {
+  //blok kodu
+  }
+
+  do {
+  //blok kodu
+  } while(condition)
+
+     */
+private void pierwszeWhile(){
+    int liczba = 1;
+    while(liczba ==1 ){
+        System.out.println("Hej Liczba to:  "+liczba);
+        liczba ++;
+        do{
+            System.out.println("LOL liczba to: "+liczba);
+            liczba ++;
+        } while (liczba<23);
+    }
+}
+//ZADANIE
+// wykonać for od 1 do 10 wyświetlić sumęFor i następnie wykonać to samo przy użyciu while/do-while
+    //oraz wykorzystać if do porównania liczb, jeśli się uzgodnią to wyświetlamy true w przeciwnym wypadku false
+
+private void sumaLiczbzForiWhile(){
+  Integer sumaFor=0;
+  Integer sumaWhile= 0;
+  Integer licznikWhile =0;
+
+  for (int i =0; i<= 10; i ++)
+  {sumaFor+=1;
+}
+  while (licznikWhile<=10){
+      sumaWhile+=licznikWhile;
+      licznikWhile++;
+  }
 
 }
 
