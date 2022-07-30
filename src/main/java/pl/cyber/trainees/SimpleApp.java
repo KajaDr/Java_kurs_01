@@ -16,6 +16,7 @@ package pl.cyber.trainees; // okreslenie pakietu gdzie znajduje sie klasa
 import pl.cyber.trainees.wyjasnienia.Basics;
 import pl.cyber.trainees.wyjasnienia.BasicsInteger;
 import pl.cyber.trainees.wyjasnienia.InstrukcjeWarunkowe;
+import pl.cyber.trainees.wyjasnienia.Petla;
 
 
 //Linia public class SimpleApp. Opisuje definicję klasy o nazwie SimpleApp.
@@ -111,12 +112,29 @@ public class SimpleApp {
         System.out.println(txt1);
         System.out.println(a + b);
 
-        System.out.println("_________________Ćwiczenie nr 4 ______________\n" +
-                "Instrukcje warunkowe");
+        System.out.println("_________________Ćwiczenie nr 1 ______________\n" +
+                "petla");
 
-        InstrukcjeWarunkowe instrukcjeWarunkowe = new InstrukcjeWarunkowe(10);
-       // Integer number1= 10;
-        // instrukcjeWarunkowe.sprawdzanieRownosci(number1);
+       // Petla petla=new Petla();
+        //petla.uruchom();
+        System.out.println("_________________Ćwiczenie nr 2 ______________\n" +
+                "                              CHOINKA");
+
+        System.out.println("_________________Ćwiczenie nr 3 ______________\n" +
+                "                             petla");
+       // Petla petla1= new Petla();
+      //  petla1.uruchom();
+
+        System.out.println("_________________Ćwiczenie nr 4______________\n" +
+                "                           SWITCH");
+
+        InstrukcjeWarunkowe instrukcjeWarunkowe= new InstrukcjeWarunkowe(0);
+
+        instrukcjeWarunkowe.uruchom();
+
+        instrukcjeWarunkowe.jakaPlec2("mezczyzna");
+
+
 
 
     }
