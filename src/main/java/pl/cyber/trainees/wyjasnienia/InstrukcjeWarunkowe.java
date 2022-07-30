@@ -1,5 +1,7 @@
 package pl.cyber.trainees.wyjasnienia;
 
+import java.util.Locale;
+
 public class InstrukcjeWarunkowe {
     //Metoda która zwróci true/false jeśli podana liczba w parametrze nie jest równa 10
 
@@ -197,15 +199,18 @@ dla pozostałych → Wskazana liczba jest inna niż oczekiwana
         }
     public void jakaPlec2(String plec){
         switch (plec){
-            case "kobieta": System.out.println("Jestem Kobietą"); break;
+            case "kobieta":
+            case "Kobieta":
+                System.out.println("Jestem Kobietą"); break;
             case "MEZCZYCZNA":System.out.println("Jestem Mezczyzna");break;
             default:
-                System.out.println("plec nie znana");
+                System.out.println("plec nie znana SWITCH");
         }
 
-        if (plec == "KOBIETA"){
+        if ("KOBIETA".equals(plec.toUpperCase())|| plec =="kobieta"){ // <-  POWIEKSZA LITERY I PRZYRUWNUJE DO LITERALU
             System.out.println(("Jestem Kobietą"));
-        } else if (plec== "mezczyzna") {
+        } else if (plec.toUpperCase(Locale.ROOT).equals( "MEZCZYZNA")) { //<- // mniej poprawna
+            // POWIEKSZA LITERY I PRZYRUWNUJE DO LITERALU
             System.out.println("Jestem Mezczyzna");
         }else{
             System.out.println("plec nie znana");
