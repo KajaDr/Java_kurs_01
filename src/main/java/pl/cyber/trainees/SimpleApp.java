@@ -17,6 +17,8 @@ import pl.cyber.trainees.wyjasnienia.Basics;
 import pl.cyber.trainees.wyjasnienia.BasicsInteger;
 import pl.cyber.trainees.wyjasnienia.InstrukcjeWarunkowe;
 import pl.cyber.trainees.wyjasnienia.Petla;
+import pl.cyber.trainees.wyjasnienia.pracadomowa30tzdyien.MojeZadanie;
+import pl.cyber.trainees.wyjasnienia.pracadomowa30tzdyien.PracaDomowa;
 
 
 //Linia public class SimpleApp. Opisuje definicję klasy o nazwie SimpleApp.
@@ -130,10 +132,18 @@ public class SimpleApp {
 
         InstrukcjeWarunkowe instrukcjeWarunkowe= new InstrukcjeWarunkowe(0);
 
-      instrukcjeWarunkowe.uruchom();
+      //instrukcjeWarunkowe.uruchom();
+        System.out.println("_________________Praca domowa tydz 30______________\n" +
+                "                           cw.1");
+        PracaDomowa pracaDomowa= new PracaDomowa();
+        //pracaDomowa.tylkoPodzielne();
+        pracaDomowa.do100();
 
         // instrukcjeWarunkowe.jakaPlec2("mezczyzna");
 
+        MojeZadanie mojeZadanie= new MojeZadanie();
+        mojeZadanie.petla(6);
+        mojeZadanie.petlaWhile();
 
 
 
