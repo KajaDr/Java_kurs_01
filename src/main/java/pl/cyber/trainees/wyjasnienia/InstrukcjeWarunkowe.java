@@ -8,16 +8,19 @@ public class InstrukcjeWarunkowe {
 
     public Integer number1;
 
-    public void uruchom(){
-      //  wyswietlSwitch(7);
-       // zadanie5();
-        jakaPlec(Plec.KOBIETA);
+    public void uruchom() {
+        //  wyswietlSwitch(7);
+        // zadanie5();
+        //  jakaPlec(Plec.KOBIETA);
+        pierwszeWhile();
 
     }
+
     public InstrukcjeWarunkowe(Integer number) {
         this.number1 = number;
 
     }
+
     public boolean sprawdzanieRownosci(Integer number1) {
         if (this.number1 != 10) {
             return true;
@@ -136,14 +139,24 @@ switch(condition) {
      */
 // Zadanie utwórz metode któa na podany parametr wejsciowy wyswietli odpowiadający tydzien
 
-   public void wyswietlSwitch(Integer jakiDzienTygodnia){
+    public void wyswietlSwitch(Integer jakiDzienTygodnia) {
 
-        switch (jakiDzienTygodnia){
-            case 1: {System.out.println("monday"); break;}
-            case 2: {System.out.println("tuesday"); break;}
-            case 3: {System.out.println("wednesday"); break;}
+        switch (jakiDzienTygodnia) {
+            case 1: {
+                System.out.println("monday");
+                break;
+            }
+            case 2: {
+                System.out.println("tuesday");
+                break;
+            }
+            case 3: {
+                System.out.println("wednesday");
+                break;
+            }
             case 4:
-            default: System.out.println("nieprawidłowy dzien");
+            default:
+                System.out.println("nieprawidłowy dzien");
         }
 
     }
@@ -162,15 +175,26 @@ dla pozostałych → Wskazana liczba jest inna niż oczekiwana
 
 
    */
-    public  void zadanie5(){
-        for(int i=0; i<=50; i++){ //<-- z petla
-            switch (i){
-                case 0: System.out.println("Wyświetlam zero"); break;
-                case 5: System.out.println(" Wyświetlam 5");  break;
-                case 10: System.out.println("To jest 10");  break;
-                case 30: System.out.println("To jest liczba 30");  break;
-                case 49: System.out.println("To jest liczba 49"); break;
-                default: System.out.println("Wskazana liczba jest inna niż oczekiwana");
+    public void zadanie5() {
+        for (int i = 0; i <= 50; i++) { //<-- z petla
+            switch (i) {
+                case 0:
+                    System.out.println("Wyświetlam zero");
+                    break;
+                case 5:
+                    System.out.println(" Wyświetlam 5");
+                    break;
+                case 10:
+                    System.out.println("To jest 10");
+                    break;
+                case 30:
+                    System.out.println("To jest liczba 30");
+                    break;
+                case 49:
+                    System.out.println("To jest liczba 49");
+                    break;
+                default:
+                    System.out.println("Wskazana liczba jest inna niż oczekiwana");
             }
         }
     }
@@ -179,44 +203,100 @@ dla pozostałych → Wskazana liczba jest inna niż oczekiwana
     //wykonać przy użyciu konstrukcji if a potem przez switch
 
 
-    enum Plec{KOBIETA,MEZCZYCZNA} //<--- jako klasa odpowiednik obiektowy, globalna zmienna
+    enum Plec {KOBIETA, MEZCZYCZNA} //<--- jako klasa odpowiednik obiektowy, globalna zmienna
 
-    private void jakaPlec(Plec plec){
-        switch (plec){
-            case KOBIETA: System.out.println("Jestem Kobietą"); break;
-            case MEZCZYCZNA:System.out.println("Jestem Mezczyzna");break;
+    private void jakaPlec(Plec plec) {
+        switch (plec) {
+            case KOBIETA:
+                System.out.println("Jestem Kobietą");
+                break;
+            case MEZCZYCZNA:
+                System.out.println("Jestem Mezczyzna");
+                break;
             default:
                 System.out.println("plec nie znana");
         }
 
-        if (plec == Plec.KOBIETA){
+        if (plec == Plec.KOBIETA) {
             System.out.println(("Jestem Kobietą"));
-        } else if (plec== Plec.MEZCZYCZNA) {
+        } else if (plec == Plec.MEZCZYCZNA) {
             System.out.println("Jestem Mezczyzna");
-        }else{
-            System.out.println("plec nie znana");
-            }
-        }
-    public void jakaPlec2(String plec){
-        switch (plec){
-            case "kobieta":
-            case "Kobieta":
-                System.out.println("Jestem Kobietą"); break;
-            case "MEZCZYCZNA":System.out.println("Jestem Mezczyzna");break;
-            default:
-                System.out.println("plec nie znana SWITCH");
-        }
-
-        if ("KOBIETA".equals(plec.toUpperCase())|| plec =="kobieta"){ // <-  POWIEKSZA LITERY I PRZYRUWNUJE DO LITERALU
-            System.out.println(("Jestem Kobietą"));
-        } else if (plec.toUpperCase(Locale.ROOT).equals( "MEZCZYZNA")) { //<- // mniej poprawna
-            // POWIEKSZA LITERY I PRZYRUWNUJE DO LITERALU
-            System.out.println("Jestem Mezczyzna");
-        }else{
+        } else {
             System.out.println("plec nie znana");
         }
     }
 
+    public void jakaPlec2(String plec) {
+        switch (plec) {
+            case "kobieta":
+            case "Kobieta":
+                System.out.println("Jestem Kobietą");
+                break;
+            case "MEZCZYCZNA":
+                System.out.println("Jestem Mezczyzna");
+                break;
+            default:
+                System.out.println("plec nie znana SWITCH");
+        }
 
+        if ("KOBIETA".equals(plec.toUpperCase()) || plec == "kobieta") { // <-  POWIEKSZA LITERY I PRZYRUWNUJE DO LITERALU
+            System.out.println(("Jestem Kobietą"));
+        } else if (plec.toUpperCase(Locale.ROOT).equals("MEZCZYZNA")) { //<- // mniej poprawna
+            // POWIEKSZA LITERY I PRZYRUWNUJE DO LITERALU
+            System.out.println("Jestem Mezczyzna");
+        } else {
+            System.out.println("plec nie znana");
+        }
+    }
+
+    /*
+
+    WHILE oraz do WHILE
+   while - słowo kluczowe określające deklarację pętli while
+do - słowo kluczowe określające deklarację pętli do-while
+(condition) - warunek, który określa nam zakończenie działania pętli, aby pętla while zadziałała
+to piersze stwierdzenie musi się nie spełniać
+{} - rozpoczęcie i zakończenie bloku / struktury pętli w ramach tych nawiasów znajduje się kod funkcji, którą ma wykonać program
+
+STRUKTURA DO ZAPAMIĘTANIA:
+  while(condition) {
+  //blok kodu
+  }
+
+  do {
+  //blok kodu
+  } while(condition)
+
+     */
+    private void pierwszeWhile() {
+        int liczba = 1;
+        while (liczba == 1) {
+            System.out.println("Hej Liczba to:  " + liczba);
+            liczba++;
+            do {
+                System.out.println("LOL liczba to: " + liczba);
+                liczba++;
+            } while (liczba < 23);
+        }
+    }
+//ZADANIE
+// wykonać for od 1 do 10 wyświetlić sumęFor i następnie wykonać to samo przy użyciu while/do-while
+    //oraz wykorzystać if do porównania liczb, jeśli się uzgodnią to wyświetlamy true w przeciwnym wypadku false
+
+    private void sumaLiczbzForiWhile() {
+        Integer sumaFor = 0;
+        Integer sumaWhile = 0;
+        Integer licznikWhile = 0;
+
+        for (int i = 0; i <= 10; i++) {
+            sumaFor += 1;
+        }
+        while (licznikWhile <= 10) {
+            sumaWhile += licznikWhile;
+            licznikWhile++;
+        }
+    }
 }
+
+
 
