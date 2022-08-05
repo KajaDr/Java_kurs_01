@@ -71,79 +71,79 @@ public class SimpleApp {
         //String/Integer/BigDecimal/Model/........ jeśli chcemy aby nasza metoda zwracała
         //konkretny typ danych i była możliwa bo użycia w innym miejscu np. klasy lub projektu
         //nazwy metod pisane camelCase'm z małej początek
-//
-//        System.out.println("_________________Ćwiczenie nr 1______________");
-//
-//
-//        //pierwsze rozwiązanie
-//        Basics basics = new Basics("1");
-//        basics.wyswietlTekst1("tekst do wyświetlenia");
-//
-//        //drugie rozwiązanie
-//        Basics basics2 = new Basics(" Nowy tekst do wyświetlenia ");
-//        basics2.wyswietlTekst2(" tekst do wyświetlenia 2");
-//
-//
-//        //trzecie rozwiązanie
-//        Basics basics3 = new Basics("tekst1", "tekst2", " tekst3");
-//        basics3.wyswietlTekst3("Nowy tekst do wyświetlenia3");
-//
-//        //Cwiczenie DRUGIE _INTEGER
-//
-//
-//        BasicsInteger basicsInteger2 = new BasicsInteger();
-//        basicsInteger2.wyswietlLiczbe(12343);
-//        basicsInteger2.wyswietlLiczbe2(1234);
-//
-//        Basics testKonstr = new Basics(123);
-//
-//        System.out.println("_________________Ćwiczenie nr 2______________");
-//
-//// dodawanie liczb z konstruktora
-//        BasicsInteger basicsInteger3 = new BasicsInteger("Dodajemy liczby ", 1, 2);
-//
-//        // M#2
-//        BasicsInteger basicsInteger = new BasicsInteger();
-//        String txt1 = "wynik:";
-//        Integer a = 12;
-//        Integer b = 12;
-//
-//        System.out.println("_________________Ćwiczenie nr 3______________");
-//
-//        basicsInteger.wyswietlanieSumyLiczb("Suma", 2, 3);
-//        System.out.println(txt1);
-//        System.out.println(a + b);
-//
-//        System.out.println("_________________Ćwiczenie nr 1 ______________\n" +
-//                "petla");
-//
-//       // Petla petla=new Petla();
-//        //petla.uruchom();
-//        System.out.println("_________________Ćwiczenie nr 2 ______________\n" +
-//                "                              CHOINKA");
-//
-//        System.out.println("_________________Ćwiczenie nr 3 ______________\n" +
-//                "                             petla");
-//       // Petla petla1= new Petla();
-//      //  petla1.uruchom();
-//
-//        System.out.println("_________________Ćwiczenie nr 4______________\n" +
-//                "                           SWITCH");
-//
-//        InstrukcjeWarunkowe instrukcjeWarunkowe= new InstrukcjeWarunkowe(0);
+
+        System.out.println("_________________Ćwiczenie nr 1______________");
+
+
+        //pierwsze rozwiązanie
+        Basics basics = new Basics("1");
+        basics.wyswietlTekst1("tekst do wyświetlenia");
+
+        //drugie rozwiązanie
+        Basics basics2 = new Basics(" Nowy tekst do wyświetlenia ");
+        basics2.wyswietlTekst2(" tekst do wyświetlenia 2");
+
+
+        //trzecie rozwiązanie
+        Basics basics3 = new Basics("tekst1", "tekst2", " tekst3");
+        basics3.wyswietlTekst3("Nowy tekst do wyświetlenia3");
+
+        //Cwiczenie DRUGIE _INTEGER
+
+
+        BasicsInteger basicsInteger2 = new BasicsInteger();
+        basicsInteger2.wyswietlLiczbe(12343);
+        basicsInteger2.wyswietlLiczbe2(1234);
+
+        Basics testKonstr = new Basics(123);
+
+        System.out.println("_________________Ćwiczenie nr 2______________");
+
+// dodawanie liczb z konstruktora
+        BasicsInteger basicsInteger3 = new BasicsInteger("Dodajemy liczby ", 1, 2);
+
+        // M#2
+        BasicsInteger basicsInteger = new BasicsInteger();
+        String txt1 = "wynik:";
+        Integer a = 12;
+        Integer b = 12;
+
+        System.out.println("_________________Ćwiczenie nr 3______________");
+
+        basicsInteger.wyswietlanieSumyLiczb("Suma", 2, 3);
+        System.out.println(txt1);
+        System.out.println(a + b);
+
+        System.out.println("_________________Ćwiczenie nr 1 ______________\n" +
+                "petla");
+
+       // Petla petla=new Petla();
+        //petla.uruchom();
+        System.out.println("_________________Ćwiczenie nr 2 ______________\n" +
+                "                              CHOINKA");
+
+        System.out.println("_________________Ćwiczenie nr 3 ______________\n" +
+                "                             petla");
+       // Petla petla1= new Petla();
+      //  petla1.uruchom();
+
+        System.out.println("_________________Ćwiczenie nr 4______________\n" +
+                "                           SWITCH");
+
+        InstrukcjeWarunkowe instrukcjeWarunkowe= new InstrukcjeWarunkowe(0);
 
       //instrukcjeWarunkowe.uruchom();
         System.out.println("_________________Praca domowa tydz 30______________\n" +
                 "                           cw.1");
         PracaDomowa pracaDomowa= new PracaDomowa();
-        pracaDomowa.tylkoPodzielne();
-//        pracaDomowa.do100();
+        //pracaDomowa.tylkoPodzielne();
+        pracaDomowa.do100();
 
-//        // instrukcjeWarunkowe.jakaPlec2("mezczyzna");
-//
-//        MojeZadanie mojeZadanie= new MojeZadanie();
-//        mojeZadanie.petla(6);
-//        mojeZadanie.petlaWhile();
+        // instrukcjeWarunkowe.jakaPlec2("mezczyzna");
+
+        MojeZadanie mojeZadanie= new MojeZadanie();
+        mojeZadanie.petla(6);
+        mojeZadanie.petlaWhile();
 
 
 
