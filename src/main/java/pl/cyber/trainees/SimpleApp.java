@@ -17,6 +17,7 @@ import pl.cyber.trainees.wyjasnienia.Basics;
 import pl.cyber.trainees.wyjasnienia.BasicsInteger;
 import pl.cyber.trainees.wyjasnienia.InstrukcjeWarunkowe;
 import pl.cyber.trainees.wyjasnienia.Petla;
+import pl.cyber.trainees.wyjasnienia.pracadomowa30tzdyien.Algoritmika;
 import pl.cyber.trainees.wyjasnienia.pracadomowa30tzdyien.MojeZadanie;
 import pl.cyber.trainees.wyjasnienia.pracadomowa30tzdyien.PracaDomowa;
 
@@ -137,13 +138,20 @@ public class SimpleApp {
                 "                           cw.1");
         PracaDomowa pracaDomowa= new PracaDomowa();
         //pracaDomowa.tylkoPodzielne();
-        pracaDomowa.do100();
+        //pracaDomowa.do100();
 
         // instrukcjeWarunkowe.jakaPlec2("mezczyzna");
 
-        MojeZadanie mojeZadanie= new MojeZadanie();
-        mojeZadanie.petla(6);
-        mojeZadanie.petlaWhile();
+      //  MojeZadanie mojeZadanie= new MojeZadanie();
+        //mojeZadanie.petla(6);
+       // mojeZadanie.petlaWhile();
+
+        System.out.println("_________________Zajecia 31______________\n" +
+                "                           cw.1 Silnia");
+
+        Algoritmika algoritmika= new Algoritmika();
+        algoritmika.algorytm();
+       // algoritmika.uruchom();
 
 
 
