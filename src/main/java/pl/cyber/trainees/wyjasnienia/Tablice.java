@@ -110,7 +110,7 @@ Częsty błąd przy tablicach:
     }
     //Zadanie 4
     //na przykładzie powyższych zadań utworzyć tablicę wielowymiarową 10x10 i
-    // wypełnić losowymi danych
+    // wypełnić losowymi danych.
     private void wyswietlTabliceZRandom1() {
         Integer[][] tablica1 = new Integer[5][5];
 
