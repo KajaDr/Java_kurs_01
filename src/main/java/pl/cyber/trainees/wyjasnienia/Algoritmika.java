@@ -1,4 +1,4 @@
-package pl.cyber.trainees.wyjasnienia.pracadomowa30tzdyien;
+package pl.cyber.trainees.wyjasnienia;
 
 import java.util.Scanner;
 

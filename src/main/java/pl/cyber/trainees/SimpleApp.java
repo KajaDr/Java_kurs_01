@@ -13,12 +13,7 @@ package pl.cyber.trainees; // okreslenie pakietu gdzie znajduje sie klasa
 
 //endregion
 
-import pl.cyber.trainees.wyjasnienia.Basics;
-import pl.cyber.trainees.wyjasnienia.BasicsInteger;
-import pl.cyber.trainees.wyjasnienia.InstrukcjeWarunkowe;
-import pl.cyber.trainees.wyjasnienia.Petla;
-import pl.cyber.trainees.wyjasnienia.pracadomowa30tzdyien.Algoritmika;
-import pl.cyber.trainees.wyjasnienia.pracadomowa30tzdyien.MojeZadanie;
+import pl.cyber.trainees.wyjasnienia.*;
 import pl.cyber.trainees.wyjasnienia.pracadomowa30tzdyien.PracaDomowa;
 
 
@@ -146,12 +141,17 @@ public class SimpleApp {
         //mojeZadanie.petla(6);
        // mojeZadanie.petlaWhile();
 
-        System.out.println("_________________Zajecia 31______________\n" +
+        System.out.println("_________________Zajecia 31 tydzien______________\n" +
                 "                           cw.1 Silnia");
 
         Algoritmika algoritmika= new Algoritmika();
-        algoritmika.algorytm();
+     //  algoritmika.algorytm();
        // algoritmika.uruchom();
+
+        System.out.println("_________________Zajecia 31 tydzien______________\n" +
+                "                           cw.1 Tablice");
+        Tablice tablice= new Tablice();
+        tablice.uruchom();
 
 
 
