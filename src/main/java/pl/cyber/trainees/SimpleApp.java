@@ -14,7 +14,10 @@ package pl.cyber.trainees; // okreslenie pakietu gdzie znajduje sie klasa
 //endregion
 
 import pl.cyber.trainees.wyjasnienia.*;
+import pl.cyber.trainees.wyjasnienia.DTA.Obiekty;
 import pl.cyber.trainees.wyjasnienia.pracadomowa30tzdyien.PracaDomowa;
+
+import java.io.IOException;
 
 
 //Linia public class SimpleApp. Opisuje definicję klasy o nazwie SimpleApp.
@@ -51,7 +54,7 @@ public class SimpleApp {
     // ale z reguły powinna być to tablica args (tj. String[] args)
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
 
 //nie tworzymny metody w metodzie, powinny byc za nawiasem sklamrowym np
@@ -151,7 +154,14 @@ public class SimpleApp {
         System.out.println("_________________Zajecia 31 tydzien______________\n" +
                 "                           cw.1 Tablice");
         Tablice tablice= new Tablice();
-        tablice.uruchom();
+       // tablice.uruchom();
+
+      //  Wyjatki wyjatki = new Wyjatki();
+        //wyjatki.uruchom();
+        System.out.println("_________________Zajecia 32 tydzien______________\n" +
+                "                           Piatek, DTO");
+        Obiekty obiekty= new Obiekty();
+        obiekty.uruchom();
 
 
 
