@@ -17,7 +17,7 @@ public class Karta {
     }
 //1.4
     public void spradzNrPin(final Integer pinKarty) {
-        if (this.pinKarty.equals(pinKarty)){
+        if (!this.pinKarty.equals(pinKarty)){
             throw  new KartaException("Niepoprawny pin karty");
         }
     }
@@ -37,6 +37,7 @@ public class Karta {
     }
 
     public Integer stanKonta() {
+
         return this.saldo;
     }
 }
