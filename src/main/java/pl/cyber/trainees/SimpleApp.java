@@ -15,7 +15,9 @@ package pl.cyber.trainees; // okreslenie pakietu gdzie znajduje sie klasa
 
 import pl.cyber.trainees.wyjasnienia.*;
 import pl.cyber.trainees.wyjasnienia.DTA.Obiekty;
+import pl.cyber.trainees.wyjasnienia.pracaDomowaTydzien32.BankomatService;
 import pl.cyber.trainees.wyjasnienia.pracadomowa30tzdyien.PracaDomowa;
+import pl.cyber.trainees.wyjasnienia.zwierzeta.ObiektyZwierzaki;
 
 import java.io.IOException;
 
@@ -160,11 +162,18 @@ public class SimpleApp {
         //wyjatki.uruchom();
         System.out.println("_________________Zajecia 32 tydzien______________\n" +
                 "                           Piatek, DTO");
-        Obiekty obiekty= new Obiekty();
-        obiekty.uruchom();
+        //Obiekty obiekty= new Obiekty();
+        //obiekty.uruchom();
 
+        System.out.println("_________________Zajecia 32 tydzien______________\n" +
+                "                           Sobota, kot");
+        //ObiektyZwierzaki obiektyZwierzaki= new ObiektyZwierzaki();
+        //obiektyZwierzaki.uruchom();
+        System.out.println("_________________Zajecia 32 tydzien______________\n" +
+                "                           Praca Domowa_Bankomat");
 
-
+        BankomatService service = new BankomatService();
+        service.uruchomRozwiazanie2();
     }
 
 
