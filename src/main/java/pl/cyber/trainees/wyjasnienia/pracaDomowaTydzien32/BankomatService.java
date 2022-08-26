@@ -2,7 +2,6 @@ package pl.cyber.trainees.wyjasnienia.pracaDomowaTydzien32;
 
 import java.util.InputMismatchException;
 import java.util.List;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class BankomatService {
@@ -35,7 +34,7 @@ public class BankomatService {
                     kwota = scanU.nextInt();
                     sprawdzWprowadzaneKwoty(kwota);
                     bankomat.sprawdzWyplate(kwota);
-                    bankomat.sprawdzGotowke(kwota);
+                    bankomat.wyplacGotowke(kwota);
                     break;
                 case 3:
                     System.out.println("stan konta");
@@ -44,7 +43,7 @@ public class BankomatService {
             }
             //8
         } catch (InputMismatchException e) {
-            throw  new BusinessException("Nie podano prawidłowej liczby odnoszącej się do wpłaty/wypłaty");
+            throw new BusinessException("Nie podano prawidłowej liczby odnoszącej się do wpłaty/wypłaty");
         }
 
         //3
@@ -54,8 +53,8 @@ public class BankomatService {
 
     //6
     // Początkowy stan konta bankomatu powinien wynosić 0, jednocześnie możemy wpłacać na stan konta wyłącznie następujące liczby (10, 20, 50, 100, 200, 500)
-    private void sprawdzWprowadzaneKwoty(final Integer kwota){
-        List<Integer> lista = List.of(10,20,50,100,200,500);
+    private void sprawdzWprowadzaneKwoty(final Integer kwota) {
+        List<Integer> lista = List.of(10, 20, 50, 100, 200, 500);
         if (!lista.contains(kwota)) {
             // ! negacja - co jesli kwota nie jest zawarta w liscie
             throw new BusinessException("Wprowadź poprawną kwotę" + lista);
@@ -87,33 +86,34 @@ public class BankomatService {
 
         } while (czyKontynowac);
     }
+
     //zad dodatkowe
     public void uruchomRozwiazanie2() {
         //zd 1.2 nadanie parametrow kart
-        List<Karta> karty= List.of(
+        List<Karta> karty = List.of(
                 new Karta(12345678, 1234, 1000),
                 new Karta(33345678, 9876, 2000)
         );
         boolean czyKontynowac;
         //1.3 weryfikacja pinu
-        boolean czyPrawidlowaKarta  = false;
+        boolean czyPrawidlowaKarta = false;
         //powolanie tymczasowgo obiektu kary, bo nie wiemy co to za karta
-        Karta karta= null;
+        Karta karta = null;
         System.out.println("wloz karte");
         Integer nrKarty = scanU.nextInt();
         System.out.println("podaj pin karty");
         Integer pinKarty = scanU.nextInt();
-    //1.4 Pin
-        for (Karta el: karty) {
-            if(el.getNrKarty().equals(nrKarty)){
+        //1.4 Pin
+        for (Karta el : karty) {
+            if (el.getNrKarty().equals(nrKarty)) {
                 el.spradzNrPin(pinKarty); // tworzymy nowa metode pozwalajaca sprawdzac pin Karty
-                czyPrawidlowaKarta=true;
-                karta=el; //przypisanie karcie wartosci
+                czyPrawidlowaKarta = true;
+                karta = el; //przypisanie karcie wartosci
             }
         }
         //1.5 sprawdzanie czy karta jest prawidlowa, jesli nie to wypluwa komunikat
 
-        if(!czyPrawidlowaKarta || karta ==null){
+        if (!czyPrawidlowaKarta || karta == null) {
             throw new BusinessException("wprowadzono bledna karte");
         }
 /*
@@ -175,10 +175,11 @@ public class BankomatService {
                 throw new BusinessException("Nie podano prawidłowej liczby z menu");
             }
             //3
-            czyKontynowac = menu2(userInfo,karta);
+            czyKontynowac = menu2(userInfo, karta);
 
         } while (czyKontynowac);
     }
+
     private boolean menu2(final int pozycja, Karta karta) {
         //7
         Integer kwota = 0;
@@ -191,21 +192,24 @@ public class BankomatService {
                     System.out.println("1. Wpłacam Gotówkę");
                     System.out.println("Prosze podac kwote wplaty");
                     kwota = scanU.nextInt();
-                    sprawdzWprowadzaneKwoty(kwota);
+                    // sprawdzWprowadzaneKwoty(kwota);
                     // nowa metoda - aby
-                    bankomat.wplacGotowke(kwota);
-                    karta.wplacGotowke(kwota);
+                    //bankomat.wplacGotowke(kwota);
+                    //karta.wplacGotowke(kwota);
+                    dokonajWplaty(kwota, karta);
                     break;
                 case 2:
                     System.out.println("2. Wypłacam Gotówkę");
                     System.out.println("Prosze podac kwote wplaty");
                     kwota = scanU.nextInt();
-                    sprawdzWprowadzaneKwoty(kwota);
-                    bankomat.sprawdzWyplate(kwota);
-                    karta.sprawdzWyplate(kwota);
+//                    sprawdzWprowadzaneKwoty(kwota);
+//                    bankomat.sprawdzWyplate(kwota);
+//                    karta.sprawdzWyplate(kwota);
+//
+//                    bankomat.sprawdzGotowke(kwota);
+//                    karta.wyplacGotowk(kwota);
+                    dokonajWyplaty(kwota, karta);
 
-                    bankomat.sprawdzGotowke(kwota);
-                    karta.wyplacGotowk(kwota);
                     break;
                 case 3:
                     System.out.println("stan konta");
@@ -218,10 +222,27 @@ public class BankomatService {
             }
             //8
         } catch (InputMismatchException e) {
-            throw  new BusinessException("Nie podano prawidłowej liczby odnoszącej się do wpłaty/wypłaty");
+            throw new BusinessException("Nie podano prawidłowej liczby odnoszącej się do wpłaty/wypłaty");
         }
 
         //3
         return pozycja != 0; // zwroci nam informacje true albo false
+    }
+
+    private void dokonajWplaty(final Integer kwota, Karta karta) {
+        sprawdzWprowadzaneKwoty(kwota);
+
+        bankomat.wplacGotowke(kwota);
+        karta.wplacGotowke(kwota);
+    }
+
+    private void dokonajWyplaty(final Integer kwota, Karta karta) {
+        sprawdzWprowadzaneKwoty(kwota);
+
+        bankomat.sprawdzWyplate(kwota);
+        karta.sprawdzWyplate(kwota);
+
+        bankomat.wyplacGotowke(kwota);
+        karta.wyplacGotowk(kwota);
     }
 }

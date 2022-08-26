@@ -21,7 +21,7 @@ public class Bankomat {
         }
     }
 
-    public void sprawdzGotowke(final Integer kwota) {
+    public void wyplacGotowke(final Integer kwota) {
         this.saldo-=kwota;
     }
 }
